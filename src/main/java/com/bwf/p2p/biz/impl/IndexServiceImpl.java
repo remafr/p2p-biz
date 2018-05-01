@@ -41,7 +41,7 @@ public class IndexServiceImpl implements IndexService{
 		Set<String> lendingPeriods=lendingPriodMapper.getAllLendingPeriod();
 		return lendingPeriods;
 	}
-	//Ã»ÓĞ·ÖÒ³µÄ²éÑ¯
+	//æ²¡æœ‰åˆ†é¡µçš„æŸ¥è¯¢
 	@Override
 	public Set<IndexVoInnerProduct> getAllIndexVoInnerProduct() {
 		Set<IndexVoInnerProduct> indexVoInnerProducts=new HashSet<>();
@@ -58,7 +58,7 @@ public class IndexServiceImpl implements IndexService{
 		}
 		return indexVoInnerProducts;
 	}
-	//·ÖÒ³²éÑ¯
+	//åˆ†é¡µæŸ¥è¯¢
 	@Override
 	public Set<IndexVoInnerProduct> getIndexVoInnerProductByPageIndex(int top, int bottom) {
 		Set<IndexVoInnerProduct> indexVoInnerProducts=new HashSet<>();
@@ -75,7 +75,7 @@ public class IndexServiceImpl implements IndexService{
 		}
 		return indexVoInnerProducts;		
 	}
-	//×Ü¹²ÓĞ¶àÉÙÊı¾İ
+	//æ€»å…±æœ‰å¤šå°‘æ•°æ®
 	@Override
 	public int selectTotalItemCount() {
 		int totalItemCounts=productMapper.getTotalItemCount();
@@ -89,7 +89,7 @@ public class IndexServiceImpl implements IndexService{
 	@Override
 	public Product getProductById(int productId) {
 		Product pro=productMapper.getProductById(productId);
-		//logger.info("¼ÇÈÕÖ¾{}", productId);
+		//logger.info("è®°æ—¥å¿—{}", productId);
 		System.out.println("sssss");
 		return pro;
 	}
@@ -129,6 +129,8 @@ public class IndexServiceImpl implements IndexService{
 			ivip.setProductTypeName(pro.getProducttype().getProductTypeName());
 			ivips.add(ivip);
 		}
+		
+		//test
 		return ivips;
 	}
 
