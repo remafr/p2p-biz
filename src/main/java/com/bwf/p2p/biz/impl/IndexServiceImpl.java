@@ -41,7 +41,7 @@ public class IndexServiceImpl implements IndexService{
 		Set<String> lendingPeriods=lendingPriodMapper.getAllLendingPeriod();
 		return lendingPeriods;
 	}
-	//没有分页的查询
+	//娌℃湁鍒嗛〉鐨勬煡璇�
 	@Override
 	public Set<IndexVoInnerProduct> getAllIndexVoInnerProduct() {
 		Set<IndexVoInnerProduct> indexVoInnerProducts=new HashSet<>();
@@ -58,7 +58,7 @@ public class IndexServiceImpl implements IndexService{
 		}
 		return indexVoInnerProducts;
 	}
-	//分页查询
+	//鍒嗛〉鏌ヨ
 	@Override
 	public Set<IndexVoInnerProduct> getIndexVoInnerProductByPageIndex(int top, int bottom) {
 		Set<IndexVoInnerProduct> indexVoInnerProducts=new HashSet<>();
@@ -75,7 +75,7 @@ public class IndexServiceImpl implements IndexService{
 		}
 		return indexVoInnerProducts;		
 	}
-	//总共有多少数据
+	//鎬诲叡鏈夊灏戞暟鎹�
 	@Override
 	public int selectTotalItemCount() {
 		int totalItemCounts=productMapper.getTotalItemCount();
@@ -89,7 +89,7 @@ public class IndexServiceImpl implements IndexService{
 	@Override
 	public Product getProductById(int productId) {
 		Product pro=productMapper.getProductById(productId);
-		//logger.info("记日志{}", productId);
+		//logger.info("璁版棩蹇梴}", productId);
 		System.out.println("sssss");
 		return pro;
 	}
@@ -131,6 +131,7 @@ public class IndexServiceImpl implements IndexService{
 		}
 		
 		//test
+		//test2
 		return ivips;
 	}
 
